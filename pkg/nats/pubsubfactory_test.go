@@ -10,6 +10,7 @@ import (
 	"github.com/ThreeDotsLabs/watermill-nats/v2/pkg/nats"
 	"github.com/ThreeDotsLabs/watermill/message"
 	"github.com/ThreeDotsLabs/watermill/pubsub/tests"
+
 	nc "github.com/nats-io/nats.go"
 	"github.com/stretchr/testify/require"
 )

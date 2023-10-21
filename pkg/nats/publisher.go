@@ -3,6 +3,7 @@ package nats
 import (
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/ThreeDotsLabs/watermill/message"
+
 	"github.com/nats-io/nats.go"
 	"github.com/pkg/errors"
 )

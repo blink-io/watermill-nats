@@ -7,7 +7,8 @@ import (
 
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/ThreeDotsLabs/watermill/message"
-	watermillSync "github.com/ThreeDotsLabs/watermill/pubsub/sync"
+	wmsync "github.com/ThreeDotsLabs/watermill/pubsub/sync"
+
 	"github.com/nats-io/nats.go"
 	"github.com/pkg/errors"
 )
@@ -429,7 +430,7 @@ func (s *Subscriber) Close() error {
 
 	close(s.closing)
 
-	if watermillSync.WaitGroupTimeout(&s.outputsWg, s.config.CloseTimeout) {
+	if wmsync.WaitGroupTimeout(&s.outputsWg, s.config.CloseTimeout) {
 		return errors.New("output wait group did not finish")
 	}
 

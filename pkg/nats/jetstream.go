@@ -1,6 +1,8 @@
 package nats
 
-import "github.com/nats-io/nats.go"
+import (
+	"github.com/nats-io/nats.go"
+)
 
 // JetStreamConfig contains configuration settings specific to running in JetStream mode
 type JetStreamConfig struct {
